@@ -1,0 +1,82 @@
+
+	<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Result</title>
+    <style>
+        .resultss{
+	border-radius: 15px 50px;
+    background: #345fe4;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+.login-container{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	.login-form-2{
+		padding: 5%;
+		background: #0062cc;
+		box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.2), 0 19px 32px 0 rgba(0, 0, 0, 0.19);
+	}
+	.login-form-2 h3{
+		text-align: center;
+		color: #fff;
+	}
+	.login-container form{
+		padding: 10%;
+	}
+	.btnSubmit
+	{
+		width: 20%;
+		border-radius: 1rem;
+		padding: 1.5%;
+		border: none;
+		cursor: pointer;
+	}
+	
+	.login-form-2 .btnSubmit{
+		font-weight: 600;
+		color: #0062cc;
+		background-color: #fff;
+	}
+	.login-form-2 .ForgetPwd{
+		color: #fff;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	
+    </style>
+       
+    </head>
+    <body>
+    
+        <header>
+            <div class="container login-container">
+                <div class="row">
+                    <div class="col-md-6 login-form-2">
+                        <h3 style="text-align: center; ">ML App</h3>
+                        <h3 style="text-align: center;">Text Based Classification on Bullying Contents</h3>
+            
+            
+                    </div>
+                    </div>
+                    </div>
+        </header>
+        <h2 style="color:blue;font-size:20; text-align: center;"><b>Results for Comment</b></h2>
+        <div class="results">
+    
+    
+            
+        {% if prediction >= 1 %}
+        <h2 style="color:red; text-align: center; ">Bully</h2>
+        {% elif prediction == 0 %}
+        <h2 style="color:blue; text-align: center;">Non Bully</h2>
+        {% endif %}
+    
+        </div>
+    
+    </body>
+    </html>
