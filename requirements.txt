@@ -10,5 +10,5 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
 bert
-tensorflow==2.0.0
+tensorflow==2.0.1
 tensorflow_hub==0.8.0
