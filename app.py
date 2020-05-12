@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,request,jsonify
-
+from flask_cors import CORS
 import pandas as pd 
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
@@ -13,6 +13,7 @@ import numpy
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+CORS(app, resources={r'/*': {'origins': '*'}})
 
 
 
